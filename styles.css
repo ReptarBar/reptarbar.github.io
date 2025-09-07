@@ -1,0 +1,36 @@
+/* Minimal starter styles. High contrast, readable, and responsive. */
+:root {
+  --bg: #0b0f14;
+  --panel: #121823;
+  --text: #e6edf3;
+  --muted: #9fb0c0;
+  --accent: #7ac9ff;
+  --accent-2: #b6f09c;
+  --radius: 14px;
+  --shadow: 0 6px 28px rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; }
+
+.container { width: min(980px, 92vw); margin: 0 auto; padding: 1.5rem; }
+.site-header { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid #1f2a3a; background: linear-gradient(180deg, #0e1420 0%, #0b0f14 100%); position: sticky; top: 0; z-index: 2; }
+.logo { border-radius: 20%; box-shadow: var(--shadow); }
+.titles h1 { margin: 0; font-size: 1.8rem; letter-spacing: 0.5px; }
+.tagline { margin: 0.15rem 0 0; color: var(--muted); }
+
+h2 { margin-top: 2rem; font-size: 1.4rem; }
+p { color: var(--text); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; padding: 0; list-style: none; }
+.card { background: var(--panel); border: 1px solid #1f2a3a; padding: 1rem; border-radius: var(--radius); box-shadow: var(--shadow); }
+.card h3 { margin: 0 0 0.4rem; }
+.card p { margin: 0; color: var(--muted); }
+
+.crew, .links { list-style: none; padding: 0; }
+.crew li, .links li { background: var(--panel); border: 1px solid #1f2a3a; margin: 0.5rem 0; padding: 0.75rem 1rem; border-radius: var(--radius); }
+
+.site-footer { text-align: center; color: var(--muted); padding: 2rem 1rem 3rem; }
+.ascii { color: var(--accent-2); background: #0e1520; border-radius: var(--radius); display: inline-block; padding: 1rem; border: 1px solid #1f2a3a; overflow: auto; max-width: min(980px, 92vw); }
