@@ -134,7 +134,7 @@ html,body{
 /* only the last line has a blinking caret */
 .welcome.terminal .line:last-child{
   animation:
-    typing steps(var(--chars)) calc(900ms + var(--chars)*22ms) forwards,
+    typing steps(var(--chars)) calc(4000ms + var(--chars)*22ms) forwards,
     caret 850ms step-end infinite;
   animation-delay: calc(2900ms + var(--i) * 1700ms)
 }
