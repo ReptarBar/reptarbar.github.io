@@ -91,6 +91,26 @@ html,body{
 
 /* Terminal-style animated welcome */
 .welcome.terminal{
+  background:#0b1114; border-left:6px solid var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  color:#9ffca8; text-shadow:0 0 6px rgba(159,252,168,0.25);
+  letter-spacing:0.2px
+}
+.welcome.terminal .line{
+  margin:0.15rem 0; white-space:nowrap; overflow:hidden; width:0ch;
+  border-right:.12em solid #9ffca8;
+  /* reveal each line sequentially */
+  animation:
+    typing steps(var(--chars)) calc(800ms + var(--chars)*18ms) forwards,
+    caret 850ms step-end infinite;
+  animation-delay: calc(var(--i) * 1200ms);
+}
+@keyframes typing{ to{ width: calc(var(--chars) * 1ch);} }
+@keyframes caret{ 50%{ border-color: transparent; } }
+
+}
+/* Terminal-style animated welcome */
+.welcome.terminal{
   background:#0b1114;
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
   color:#9ffca8;
