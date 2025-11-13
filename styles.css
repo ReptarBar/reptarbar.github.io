@@ -117,20 +117,35 @@ html,body{
   text-shadow:0 0 6px rgba(159,252,168,0.25);
   letter-spacing:0.2px;
 }
+
 .welcome.terminal .line{
-  margin:0.15rem 0;
+  margin:0.25rem 0;                     /* more vertical breathing room */
   white-space:nowrap;
   overflow:hidden;
   width:0ch;
+  padding-right:0.8ch;                  /* extra space so last char is never clipped */
   border-right:.12em solid #9ffca8;
   animation:
-    typing steps(var(--chars)) calc(800ms + var(--chars)*18ms) forwards,
-    caret 850ms step-end infinite;
-  animation-delay: calc(var(--i) * 1200ms);
+    typing steps(var(--chars)) calc(900ms + var(--chars)*22ms) forwards;
+  /* slightly longer base delay + more gap between lines */
+  animation-delay: calc(500ms + var(--i) * 1600ms);
 }
-@keyframes typing{ to{ width: calc(var(--chars) * 1ch);} }
-@keyframes caret{ 50%{ border-color:transparent; } }
 
+/* only the last line has a blinking caret */
+.welcome.terminal .line:last-child{
+  animation:
+    typing steps(var(--chars)) calc(900ms + var(--chars)*22ms) forwards,
+    caret 850ms step-end infinite;
+}
+
+@keyframes typing{
+  /* add a little buffer so the cursor has room after the last character */
+  to{ width: calc(var(--chars) * 1ch + 0.8ch); }
+}
+
+@keyframes caret{
+  50%{ border-color:transparent; }
+}
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
