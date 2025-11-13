@@ -23,10 +23,10 @@ Notes:
 Notes:
 
 ## Reflection
-- What surprised you most
-- Single improvement for newcomers
-- Would you return or recommend others to join
+- What surprised you most  
+- Single improvement for newcomers  
+- Would you return or recommend others to join  
 
 ## Links and Artifacts
-- Issues, PRs, threads
-- Screenshots, if any
+- Issues, PRs, threads  
+- Screenshots, if any  
