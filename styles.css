@@ -136,6 +136,7 @@ html,body{
   animation:
     typing steps(var(--chars)) calc(900ms + var(--chars)*22ms) forwards,
     caret 850ms step-end infinite;
+  animation-delay: calc(500ms + var(--i) * 1700ms)
 }
 
 @keyframes typing{
