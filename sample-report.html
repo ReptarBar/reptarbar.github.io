@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Commit Confidential - Sample Agent Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="A fictional sample report from a Commit Confidential secret shopper mission, based on our v1.0 field instructions and agent report template."
+  >
+  <link rel="icon" type="image/png" href="assets/commit-confidential-hero.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="shell site-header-inner">
+        <div class="site-brand">
+          <div class="brand-mark">
+            <img src="assets/commit-confidential-hero.png" alt="Commit Confidential logo">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Commit Confidential</span>
+            <span class="brand-tagline">Signal. Feedback. Improvement.</span>
+          </div>
+        </div>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html#audit">Audit</a>
+          <a href="index.html#agents">Agents</a>
+          <a href="sample-report.html" aria-current="page">Sample report</a>
+          <a href="community.html">Community</a>
+          <a href="index.html#ethics">Ethics</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Intro section -->
+      <section class="section">
+        <div class="shell">
+          <div class="panel panel-report-intro">
+            <h1 class="hero-title" style="margin-bottom: 0.85rem;">
+              Sample secret shopper report
+            </h1>
+            <p class="section-body" style="margin-bottom: 0.85rem;">
+              This is a fictional example of what you receive from a Commit Confidential secret shopper audit.
+              It is based on our v1.0 field instructions and the standard agent report template that agents use in the field.
+            </p>
+            <p class="section-body" style="margin-bottom: 1.4rem;">
+              Every mission runs through five pillars of contributor health
+              access, interaction, process, recognition, and safety and governance
+              with anchored scores from 1 to 5, concrete observations, and a final reflection. 
+            </p>
+
+            <div class="hero-cta-row">
+              <a class="btn btn-primary" href="report-template.md">
+                Download blank report template
+              </a>
+              <a
+                class="btn btn-secondary"
+                href="mailto:michael@commitconfidential.com?subject=Sample%20report%20questions"
+              >
+                Ask about this sample
+              </a>
+            </div>
+
+            <p class="section-footnote" style="margin-top: 1.3rem;">
+              Note, all names and details below are invented for illustration only. Real client reports stay private.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sample report document -->
+      <section class="section">
+        <div class="shell">
+          <div class="panel sample-report">
+            <header class="sample-report-header">
+              <div class="sample-report-meta">
+                <div><span class="sample-label">Agent ID:</span> CC-017</div>
+                <div><span class="sample-label">Project:</span> ExampleDocs JS</div>
+                <div><span class="sample-label">Date:</span> 2025-11-15</div>
+              </div>
+              <div class="sample-report-score">
+                <span class="sample-label">Overall rating</span>
+                <span class="sample-score-value">3.4 / 5</span>
+                <span class="sample-score-note">Anchored average across five pillars</span>
+              </div>
+            </header>
+
+            <article class="sample-report-body">
+              <!-- Access -->
+              <section class="sample-report-section">
+                <h2>1. ACCESS (Entry and onboarding)</h2>
+                <div class="sample-section-top">
+                  <div class="sample-score-chip">
+                    <span class="sample-label">Score</span>
+                    <span class="sample-score-pill">3 / 5</span>
+                  </div>
+                  <p class="sample-score-meaning">
+                    Anchored meaning: mostly functional but with gaps, delays, or unclear elements.
+                  </p>
+                </div>
+
+                <h3>Observations</h3>
+                <ul>
+                  <li>README is friendly and short, but key setup steps live only in a separate docs site that is not clearly linked.</li>
+                  <li>Install section assumes familiarity with Node and npm, without a simple one line checklist for newcomers.</li>
+                  <li>There is a "good first issue" label, but only two issues are marked and both are more than three months old.</li>
+                </ul>
+
+                <h3>Actions taken</h3>
+                <ul>
+                  <li>Followed setup instructions exactly as written on README, then followed the first linked docs page.</li>
+                  <li>Setup time from zero to running test suite, 35 minutes.</li>
+                  <li>Hit a missing step, needed to install an additional global tool that was only mentioned in a closed issue.</li>
+                </ul>
+
+                <h3>Notes</h3>
+                <p>
+                  Once the missing global dependency was installed, everything worked smoothly. The biggest friction for
+                  a first time contributor is the scattered information. Most of the right steps exist, but a newcomer
+                  has to jump between README, docs site, and old issues to piece them together.
+                </p>
+              </section>
+
+              <!-- Interaction -->
+              <section class="sample-report-section">
+                <h2>2. INTERACTION (Human experience)</h2>
+                <div class="sample-section-top">
+                  <div class="sample-score-chip">
+                    <span class="sample-label">Score</span>
+                    <span class="sample-score-pill">4 / 5</span>
+                  </div>
+                  <p class="sample-score-meaning">
+                    Anchored meaning: mostly warm and responsive, with clear good will toward newcomers.
+                  </p>
+                </div>
+
+                <h3>Observations</h3>
+                <ul>
+                  <li>Issue threads show a consistent pattern of maintainers thanking people for reports and ideas.</li>
+                  <li>Tone is relaxed and respectful, with some humor, but no sarcasm at the expense of newcomers.</li>
+                  <li>Inclusivity signals are present, including explicit pronouns in maintainer profiles and a visible Code of Conduct link in the issue template.</li>
+                </ul>
+
+                <h3>Actions taken</h3>
+                <ul>
+                  <li>Filed an issue titled "Docs, missing global dependency during setup" that described the error in two paragraphs.</li>
+                  <li>Response time, two hours, from a maintainer in a European time zone.</li>
+                  <li>Reply acknowledged the gap, suggested a fix, and added a heart reaction on the issue.</li>
+                </ul>
+
+                <h3>Notes</h3>
+                <p>
+                  The interaction experience is a strength. Even when maintainers are busy, they keep responses human and specific.
+                  The main risk is that this level of care may not scale if issue volume grows without more maintainers joining.
+                </p>
+              </section>
+
+              <!-- Process -->
+              <section class="sample-report-section">
+                <h2>3. PROCESS (Workflow and predictability)</h2>
+                <div class="sample-section-top">
+                  <div class="sample-score-chip">
+                    <span class="sample-label">Score</span>
+                    <span class="sample-score-pill">3 / 5</span>
+                  </div>
+                  <p class="sample-score-meaning">
+                    Anchored meaning: partially structured but uneven and not fully predictable for newcomers.
+                  </p>
+                </div>
+
+                <h3>Observations</h3>
+                <ul>
+                  <li>Issues have labels, but definitions of labels live only in a wiki page that is not linked from templates.</li>
+                  <li>There is a CONTRIBUTING file, but it has not been updated in over a year, and some details disagree with current review practice.</li>
+                  <li>PR reviews appear thoughtful but happen in bursts, suggesting review happens on a weekly block rather than daily.</li>
+                </ul>
+
+                <h3>Actions taken</h3>
+                <ul>
+                  <li>Submitted a small docs PR that adds the missing global dependency to the setup instructions and adds a short troubleshooting note.</li>
+                  <li>PR reference, internal for this report, not included here.</li>
+                  <li>Time to first review, 3 days, with a single maintainer leaving feedback.</li>
+                  <li>Feedback was clear and kind, requested a smaller change to wording and a link to the official Node installer.</li>
+                </ul>
+
+                <h3>Notes</h3>
+                <p>
+                  The process feels like a real project that is run by humans with limited time, not a chaotic one. The main friction for a newcomer
+                  is that some written rules and real practice have drifted apart. A short review and refresh of CONTRIBUTING and label definitions
+                  would reduce confusion and help others help maintainers.
+                </p>
+              </section>
+
+              <!-- Recognition -->
+              <section class="sample-report-section">
+                <h2>4. RECOGNITION (Acknowledgment and support)</h2>
+                <div class="sample-section-top">
+                  <div class="sample-score-chip">
+                    <span class="sample-label">Score</span>
+                    <span class="sample-score-pill">3 / 5</span>
+                  </div>
+                  <p class="sample-score-meaning">
+                    Anchored meaning: basic acknowledgment is present, but recognition is not yet a deliberate practice.
+                  </p>
+                </div>
+
+                <h3>Observations</h3>
+                <ul>
+                  <li>Maintainers often say "thank you" in comments, but there is no structured way of celebrating new contributors.</li>
+                  <li>Release notes mention features, but rarely name individual contributors except core maintainers.</li>
+                  <li>There is no visible "hall of fame" or contributor highlights page on the docs site.</li>
+                </ul>
+
+                <h3>Actions taken</h3>
+                <ul>
+                  <li>The docs PR received a thank you comment and a thumbs up reaction after merge.</li>
+                  <li>No follow up mention in release notes or social channels for this type of contribution.</li>
+                </ul>
+
+                <h3>Notes</h3>
+                <p>
+                  You can feel that maintainers appreciate help, but they do not yet turn that appreciation into visible signals.
+                  A few low effort rituals, for example naming first time contributors in release notes or a monthly "new contributors" thread,
+                  would make it easier for people to feel invited back.
+                </p>
+              </section>
+
+              <!-- Safety and governance -->
+              <section class="sample-report-section">
+                <h2>5. SAFETY and GOVERNANCE (Stability and stewardship)</h2>
+                <div class="sample-section-top">
+                  <div class="sample-score-chip">
+                    <span class="sample-label">Score</span>
+                    <span class="sample-score-pill">4 / 5</span>
+                  </div>
+                  <p class="sample-score-meaning">
+                    Anchored meaning: governance feels real, project health is good, and expectations are mostly clear.
+                  </p>
+                </div>
+
+                <h3>Observations</h3>
+                <ul>
+                  <li>Code of Conduct is linked from README and from the issue template, and hosted in a central docs folder.</li>
+                  <li>Last release was within 30 days, and commit activity is steady, not bursty.</li>
+                  <li>There is a "Maintainers" page listing three primary maintainers and their responsibilities.</li>
+                </ul>
+
+                <h3>Actions taken</h3>
+                <ul>
+                  <li>Scanned for explicit moderation examples, found one closed thread where a maintainer asked to move a heated debate to a different channel and cited the CoC.</li>
+                  <li>Looked for roadmap or long term vision, found a short "Project goals" page that is a year old but still mostly accurate.</li>
+                </ul>
+
+                <h3>Notes</h3>
+                <p>
+                  Safety and governance feel intentional. The risk is mostly around keeping governance documents fresh. At current size, the project is stable.
+                  If growth accelerates, you will likely need clearer escalation paths and explicit expectations for new maintainers.
+                </p>
+              </section>
+
+              <!-- Final reflection -->
+              <section class="sample-report-section sample-report-final">
+                <h2>Final reflection</h2>
+
+                <h3>1. What surprised you most?</h3>
+                <p>
+                  The biggest surprise was how quickly maintainers responded, given that documentation and process feel slightly out of date.
+                  Human behavior is ahead of the written process, which is a better problem to have than the reverse.
+                </p>
+
+                <h3>2. What single improvement would have helped most?</h3>
+                <p>
+                  A single, up to date "First contribution" page that links README, setup, label definitions, and a curated set of current starter issues
+                  would remove most of the guesswork. It would also give maintainers a stable link they can drop into replies.
+                </p>
+
+                <h3>3. Would you return to this community, and why?</h3>
+                <p>
+                  Yes. As a newcomer I felt heard and supported. The remaining friction is mostly about scattered information, not behavior.
+                  With a small push on docs consolidation and contributor recognition, this could easily move from a good experience to an excellent one.
+                </p>
+
+                <div class="sample-report-summary">
+                  <div class="sample-summary-pillars">
+                    <h3>Pillar scores, at a glance</h3>
+                    <ul>
+                      <li><span>Access</span><span>3 / 5</span></li>
+                      <li><span>Interaction</span><span>4 / 5</span></li>
+                      <li><span>Process</span><span>3 / 5</span></li>
+                      <li><span>Recognition</span><span>3 / 5</span></li>
+                      <li><span>Safety and governance</span><span>4 / 5</span></li>
+                    </ul>
+                  </div>
+                  <div class="sample-summary-text">
+                    <h3>Overall rating</h3>
+                    <p>
+                      Average score, 3.4 out of 5. This project is healthy and welcoming, with most friction concentrated in scattered documentation
+                      and ad hoc recognition. A short, focused contributor experience project over one or two quarters would likely raise this to a 4 or higher.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer-inner">
+        <p>© Commit Confidential. Built with care. Keep it kind.</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
