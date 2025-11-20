@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta
     name="description"
-    content="Commit Confidential runs outside-in audits of open source and developer communities, finding friction, quantifying impact, and delivering fixes you can ship."
+    content="Commit Confidential runs outside-in audits of open source and developer communities, finding friction, prioritizing impact, and delivering fixes your team can ship."
   >
   <link rel="icon" type="image/png" href="assets/commit-confidential-hero.png">
   <link rel="stylesheet" href="styles.css">
@@ -26,20 +26,29 @@
             <span class="brand-tagline">Signal. Feedback. Improvement.</span>
           </div>
         </div>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#audit">Audit</a>
+          <a href="#agents">Agents</a>
+          <a href="community.html">Community</a>
+          <a href="#ethics">Ethics</a>
+        </nav>
       </div>
     </header>
 
     <main>
 
       <!-- Hero -->
-      <section class="section hero">
+      <section class="section hero" aria-labelledby="hero-title">
         <div class="shell">
           <div class="hero-inner">
 
             <!-- Main hero content -->
             <div class="hero-main">
-              <h1 class="hero-title">Outside-in audits for open source and developer communities</h1>
-              <p class="hero-kicker">We find friction, quantify impact, and provide fixes you can ship.</p>
+              <h1 id="hero-title" class="hero-title">Outside-in audits for open source and developer communities</h1>
+              <p class="hero-kicker">
+                We find friction, prioritize impact, and provide fixes your team can ship.
+              </p>
 
               <p class="hero-body">
                 Commit Confidential is a quiet field team for community health. We move through your docs, forums,
@@ -55,9 +64,21 @@
                 <li>Doc clarity</li>
                 <li>Path-to-PR maps</li>
                 <li>Recognition loops</li>
-                <li>Safety scans</li>
+                <li>Safety and moderation review</li>
                 <li>Playbook advice</li>
               </ul>
+
+              <div class="hero-cta-row">
+                <a
+                  class="btn btn-primary"
+                  href="mailto:michael@commitconfidential.com?subject=Intro%20call%20-%20Commit%20Confidential%20audit"
+                >
+                  Book an intro call
+                </a>
+                <a class="btn btn-secondary" href="#audit">
+                  See how the audit works
+                </a>
+              </div>
             </div>
 
             <!-- Hero aside -->
@@ -108,73 +129,78 @@
               Commit Confidential is a quiet field team for community health. We move through your docs,
               forums, chat, and repos like first-time contributors, logging every point of friction along
               the way. What you get back is not hype or hand-waving, but a clear, classified-style report
-              on access, interaction, process, recognition, and safety, with specific fixes you can ship.
+              on access, interaction, process, recognition, and safety, with specific fixes that your team
+              can realistically ship.
             </p>
           </div>
         </div>
       </section>
 
-<!-- Mission / Offer -->
-<section class="section section-mission">
-  <div class="shell">
-    <div class="panel panel-mission">
+      <!-- Mission / Offer -->
+      <section id="audit" class="section section-mission">
+        <div class="shell">
+          <div class="panel panel-mission">
 
-      <h2 class="section-title">Secret shopper audit</h2>
+            <h2 class="section-title">Secret shopper audit</h2>
 
-      <p class="section-intro">
-        A single, outside-in pass through your contributor experience, scored across five pillars and delivered
-        as a clear, private report.
-      </p>
+            <p class="section-intro">
+              A single, outside-in pass through your contributor experience, scored across five pillars and delivered
+              as a clear, private report.
+            </p>
 
-      <div class="mission-grid">
-        <!-- What you get -->
-        <div class="mission-column">
-          <h3 class="mission-subtitle">What you get</h3>
-          <ul class="mission-list">
-            <li>One secret shopper run through your docs, issues, chat, and repo as a first-time contributor.</li>
-            <li>Scoring across five pillars: access, interaction, process, recognition, and safety.</li>
-            <li>A written, classified-style report with specific fixes you can ship in the next 30–60 days.</li>
-            <li>Highlighted friction points, with suggested remedies and example copy where useful.</li>
-            <li>A short debrief call to walk your team through key findings and answer questions.</li>
-             <p class="mission-note"> 
-             </p> 
-          </ul>
+            <div class="mission-grid">
+              <!-- What you get -->
+              <div class="mission-column">
+                <h3 class="mission-subtitle">What you get</h3>
+                <ul class="mission-list">
+                  <li>One secret shopper run through your docs, issues, chat, and repo as a first-time contributor.</li>
+                  <li>Scoring across five pillars: access, interaction, process, recognition, and safety.</li>
+                  <li>A written, classified-style report with specific fixes scoped so your team can ship them over the next one or two quarters.</li>
+                  <li>Highlighted friction points, with suggested remedies and example copy where useful.</li>
+                  <li>A short debrief call to walk your team through key findings and answer questions.</li>
+                </ul>
+              </div>
+
+              <!-- Pricing -->
+              <div class="mission-column">
+                <h3 class="mission-subtitle">Pricing</h3>
+                <p class="mission-price">
+                  <strong>Secret shopper audit for one project: $1,200 USD</strong>
+                </p>
+                <p class="mission-note">
+                  Flat rate for one project (for example, one GitHub repo plus its primary community channel),
+                  including one agent run, a written report, and a 45-minute debrief call.
+                </p>
+
+                <div class="mission-cta">
+                  <a 
+                    class="btn btn-primary btn-buy"
+                    href="mailto:michael@commitconfidential.com?subject=Secret%20Shopper%20Audit%20-%20Purchase%20Request"
+                  >
+                    Buy Now – Start Your Audit
+                  </a>
+                  <a
+                    class="btn btn-secondary btn-outline"
+                    href="mailto:michael@commitconfidential.com?subject=Secret%20Shopper%20Audit%20-%20Questions"
+                  >
+                    Talk to an agent first
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-
-        <!-- Pricing -->
-        <div class="mission-column">
-          <h3 class="mission-subtitle">Pricing</h3>
-          <p class="mission-price">
-            <strong>Secret shopper audit for one project: $1,200 USD</strong>
-          </p>
-          <p class="mission-note">
-            Flat rate for one project (one repo plus its primary community channel), including one agent run,
-            a written report, and a 45-minute debrief call.
-          </p>
-        </div>
-      
-<div class="mission-cta">
-  <a 
-    class="btn btn-primary btn-buy"
-    href="mailto:michael@commitconfidential.com?subject=Secret%20Shopper%20Audit%20-%20Purchase%20Request"
-  >
-    Buy Now – Start Your Audit
-  </a>
-</div>
-
-    </div>
-  </div>
-</section>
-
+      </section>
 
       <!-- Ethics -->
-      <section class="section section-ethics">
+      <section id="ethics" class="section section-ethics">
         <div class="shell">
           <div class="panel panel-ethics">
-            <h2 class="section-title">Our Ethics, in short</h2>
+            <h2 class="section-title">Our ethics, in short</h2>
             <ul class="ethics-list">
               <li><span class="ethic-mark" aria-hidden="true"></span>We do not reveal personal details or name individuals.</li>
-              <li><span class="ethic-mark" aria-hidden="true"></span>We describe experiences & avoid blame.</li>
+              <li><span class="ethic-mark" aria-hidden="true"></span>We describe experiences and avoid blame.</li>
               <li><span class="ethic-mark" aria-hidden="true"></span>We provide insights for improvements, free of slant.</li>
             </ul>
           </div>
@@ -182,7 +208,7 @@
       </section>
 
       <!-- Submit -->
-      <section class="section section-submit">
+      <section id="agents" class="section section-submit">
         <div class="shell">
           <div class="panel panel-submit">
             <h2 class="section-title">Active Agents: Submit your report</h2>
