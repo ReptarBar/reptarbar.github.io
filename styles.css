@@ -192,34 +192,46 @@ body {
   max-width: 38rem;
 }
 
-/* Services grid */
+/* Services grid – pill tiles with accent glow on one side */
 
 .services-grid {
   list-style: none;
   padding: 0;
-  margin: 1.1rem 0 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0.4rem 1.2rem;
-  font-size: 0.88rem;
-  color: var(--text-softer);
+  margin: 1.25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
 }
 
 .services-grid li {
   position: relative;
-  padding-left: 0.9rem;
+  padding: 0.45rem 1.1rem 0.5rem 1.15rem;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at left center,
+    rgba(57, 217, 138, 0.18),
+    rgba(15, 23, 42, 0.98)
+  );
+  border: 1px solid rgba(15, 23, 42, 0.95);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+  font-size: 0.86rem;
+  color: var(--text-main);
+  overflow: hidden;
 }
 
 .services-grid li::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0.55rem;
+  left: 0.45rem;
+  top: 50%;
+  transform: translateY(-50%);
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 999px;
-  background: var(--accent-soft);
-  box-shadow: 0 0 0 1px rgba(57, 217, 138, 0.4);
+  background: var(--accent);
+  box-shadow:
+    0 0 0 2px rgba(57, 217, 138, 0.4),
+    0 0 16px rgba(57, 217, 138, 0.65);
 }
 
 /* Hero CTA */
@@ -239,6 +251,7 @@ body {
 }
 
 /* Stylized classified file card */
+
 .hero-file {
   position: relative;
   background: radial-gradient(circle at top left, #1f2937 0, #020617 55%, #000 100%);
@@ -300,19 +313,22 @@ body {
   margin: 0.5rem 0 1rem;
 }
 
+/* Cherry-red bars: solid red on the left, fading to dark cherry */
+
 .hero-redaction-bars span {
   display: block;
   height: 10px;
   border-radius: 4px;
   background: linear-gradient(
-    to right,
-    rgba(15, 23, 42, 0.95),
-    rgba(248, 113, 113, 0.6),
-    rgba(15, 23, 42, 0.95)
+    90deg,
+    #ef4444 0%,
+    #dc2626 22%,
+    #b91c1c 55%,
+    #450a0a 100%
   );
   box-shadow:
     0 0 0 1px rgba(15, 23, 42, 0.9),
-    0 0 18px rgba(248, 113, 113, 0.45);
+    0 0 22px rgba(248, 113, 113, 0.55);
 }
 
 .hero-redaction-bars span:nth-child(2) {
@@ -341,10 +357,67 @@ body {
 
 .panel {
   border-radius: var(--radius-xl);
-  background: radial-gradient(circle at top left, #0f172a, #020617 55%);
+  background: radial-gradient(circle at top left, rgba(57, 217, 138, 0.16), #020617 55%);
   border: 1px solid rgba(15, 23, 42, 0.9);
   box-shadow: var(--shadow-soft);
   padding: 1.6rem 1.7rem 1.8rem;
+}
+
+/* Sample-report / community variants */
+
+body.page-report {
+  background: radial-gradient(circle at top, #020617, #02030a 55%, #000 100%);
+}
+
+/* Intro panel on sample-report page with snow owl artwork */
+
+.panel-report-intro {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, rgba(57, 217, 138, 0.2), #020617 60%);
+}
+
+.panel-report-intro::after {
+  content: "";
+  position: absolute;
+  right: -6%;
+  bottom: -26%;
+  width: 320px;
+  height: 320px;
+  background-image: url("assets/commit-confidential-icon-snow.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.34;
+  filter: grayscale(0.1);
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+
+/* Make the sample report document panel feel like a heavier dossier */
+
+.panel.sample-report {
+  background: radial-gradient(circle at top left, #020617, #020617 45%, #02040b 100%);
+  border: 1px solid rgba(30, 64, 175, 0.55);
+  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.9);
+}
+
+/* Community panel variant */
+
+.panel-community {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, rgba(248, 113, 113, 0.16), #020617 60%);
+}
+
+.panel-community::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(57, 217, 138, 0.08), transparent 55%);
+  mix-blend-mode: screen;
+  opacity: 0.8;
+  pointer-events: none;
 }
 
 /* Callout */
@@ -944,7 +1017,7 @@ body {
   }
 
   .services-grid {
-    grid-template-columns: minmax(0, 1fr);
+    justify-content: flex-start;
   }
 }
 
