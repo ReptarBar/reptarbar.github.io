@@ -94,6 +94,65 @@
             </header>
 
             <article class="sample-report-body">
+
+              <section class="sample-report-section" aria-labelledby="shippable-fixes-heading">
+                <h2 id="shippable-fixes-heading">Top 5 Shippable Fixes (Next 90 Days)</h2>
+                <div class="sample-section-top">
+                  <p class="sample-score-meaning" style="margin-bottom: 0.5rem;">
+                    Shippable recommendations (90-day focus). These are ready to become five GitHub issues today.
+                  </p>
+                </div>
+                <ol>
+                  <li>
+                    <strong>Create a “First Contribution” hub page.</strong>
+                    <br>
+                    <em>Content:</em> setup checklist, label definitions, 5–10 curated starter issues.
+                    <br>
+                    <em>Where:</em> /docs/contributing/getting-started.md and linked in README.
+                    <br>
+                    <em>Effort:</em> ~1–2 days.
+                    <br>
+                    <em>Impact:</em> reduces onboarding time and repeated Q&amp;A.
+                  </li>
+                  <li>
+                    <strong>Update CONTRIBUTING and label definitions to match current practice.</strong>
+                    <br>
+                    <em>Actions:</em> review CONTRIBUTING line-by-line, remove outdated steps, link label wiki in issue templates.
+                    <br>
+                    <em>Effort:</em> ~0.5–1 day.
+                    <br>
+                    <em>Impact:</em> fewer “but the docs say…” disagreements, smoother PRs.
+                  </li>
+                  <li>
+                    <strong>Introduce a “New Contributors” recognition ritual each release.</strong>
+                    <br>
+                    <em>Actions:</em> add a “Thanks to new contributors” section naming first-timers.
+                    <br>
+                    <em>Effort:</em> 30 minutes per release.
+                    <br>
+                    <em>Impact:</em> higher return rate from first-time contributors.
+                  </li>
+                  <li>
+                    <strong>Add a one-line setup checklist to README.</strong>
+                    <br>
+                    <em>Actions:</em> include Node version, npm, global tool, and “run tests” command as a bullet list at top.
+                    <br>
+                    <em>Effort:</em> &lt; 1 hour.
+                    <br>
+                    <em>Impact:</em> quicker success for drive-by contributors.
+                  </li>
+                  <li>
+                    <strong>Schedule a governance / CoC review every 6–12 months.</strong>
+                    <br>
+                    <em>Actions:</em> add a calendar reminder and a “last reviewed” date to governance docs.
+                    <br>
+                    <em>Effort:</em> 1–2 hours twice a year.
+                    <br>
+                    <em>Impact:</em> keeps safety and stewardship ahead of growth.
+                  </li>
+                </ol>
+              </section>
+              
               <!-- Access -->
               <section class="sample-report-section">
                 <h2>1. ACCESS (Entry and onboarding)</h2>
@@ -127,6 +186,19 @@
                   a first time contributor is the scattered information. Most of the right steps exist, but a newcomer
                   has to jump between README, docs site, and old issues to piece them together.
                 </p>
+                
+                <h3>Recommended actions</h3>
+                <ul>
+                  <li>
+                    Add a single “First contribution” doc that links from README, consolidates setup, labels, and starter issues.
+                  </li>
+                  <li>
+                    Add a “Quick start checklist” to the top of README with explicit global dependency.
+                  </li>
+                  <li>
+                    Refresh “good first issue” labels quarterly and keep at least 3–5 current.
+                  </li>
+                </ul>
               </section>
 
               <!-- Interaction -->
@@ -161,6 +233,12 @@
                   The interaction experience is a strength. Even when maintainers are busy, they keep responses human and specific.
                   The main risk is that this level of care may not scale if issue volume grows without more maintainers joining.
                 </p>
+
+                <h3>Recommended actions</h3>
+                <ul>
+                  <li>Document a soft target for first response to new contributors (for example, “aim for &lt; 48 hours”).</li>
+                  <li>Create a canned reply snippet for setup issues pointing to the new “First contribution” hub.</li>
+                </ul>
               </section>
 
               <!-- Process -->
@@ -197,6 +275,12 @@
                   is that some written rules and real practice have drifted apart. A short review and refresh of CONTRIBUTING and label definitions
                   would reduce confusion and help others help maintainers.
                 </p>
+                
+                <h3>Recommended actions</h3>
+                <ul>
+                  <li>Update CONTRIBUTING.md to align with current review cadence and expectations.</li>
+                  <li>Move label definitions from hidden wiki to a linked “Labels explained” doc and reference it in issue templates.</li>
+                </ul>
               </section>
 
               <!-- Recognition -->
@@ -231,6 +315,12 @@
                   A few low effort rituals, for example naming first time contributors in release notes or a monthly "new contributors" thread,
                   would make it easier for people to feel invited back.
                 </p>
+                
+                <h3>Recommended actions</h3>
+                <ul>
+                  <li>Add a “New contributors” section to release notes naming people, not just features.</li>
+                  <li>Start a monthly “Thank you” issue or discussion thread that highlights small but impactful contributions.</li>
+                </ul>
               </section>
 
               <!-- Safety and governance -->
@@ -264,6 +354,12 @@
                   Safety and governance feel intentional. The risk is mostly around keeping governance documents fresh. At current size, the project is stable.
                   If growth accelerates, you will likely need clearer escalation paths and explicit expectations for new maintainers.
                 </p>
+                
+                <h3>Recommended actions</h3>
+                <ul>
+                  <li>Add an “Escalation path” bullet list to the CoC or governance doc.</li>
+                  <li>Add a “last reviewed” date to governance pages so it’s clear they are alive.</li>
+                </ul>
               </section>
 
               <!-- Final reflection -->
