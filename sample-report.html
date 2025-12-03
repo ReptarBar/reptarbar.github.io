@@ -29,7 +29,7 @@
 
         <nav class="site-nav" aria-label="Primary">
           <a href="about.html">About</a>
-          <a href="index.html#audit">Audit</a>
+          <a href="index.html#process">Audit</a>
            <a href="community.html#agents">Agents</a>
           <a href="sample-report.html" aria-current="page">Sample report</a>
           <a href="community.html">Community</a>
@@ -57,13 +57,30 @@
               with anchored scores from 1 to 5, concrete observations, and a final reflection. 
             </p>
 
-            <div class="hero-cta-row">
-              <a class="btn btn-primary" href="report-template.md">
-                Download blank report template
-              </a>
+            <div class="hero-cta-row template-gate" id="template-gate">
+              <div class="gate-card" aria-labelledby="template-gate-label">
+                <div class="gate-top">
+                  <p id="template-gate-label" class="gate-label">Access required</p>
+                  <p class="section-body">Enter the access code from your briefing to unlock the blank report template.</p>
+                </div>
+                <div class="gate-controls">
+                  <label for="template-code" class="visually-hidden">Access code</label>
+                  <input id="template-code" name="template-code" type="password" placeholder="Access code" autocomplete="off">
+                  <button type="button" class="btn btn-primary" data-template-action="unlock">Unlock template</button>
+                </div>
+                <p class="gate-note">Need a code? Request one before sharing the template.</p>
+                <p class="gate-status error" data-template-error hidden>Incorrect code. Try again or request access.</p>
+                <div class="gate-result" data-template-result hidden>
+                  <a class="btn btn-secondary" href="report-template.md" download>
+                    Download blank report template
+                  </a>
+                  <span class="gate-status success">Unlocked</span>
+                </div>
+              </div>
+              
               <a
                 class="btn btn-secondary"
-                href="mailto:michael@commitconfidential.com?subject=Sample%20report%20-%20questions&body=Hi%20Commit%20Confidential%2C%0A%0AI%27m%20reviewing%20your%20sample%20report%20and%20had%20a%20few%20questions.%0A%0AWhat%20I%20want%20to%20understand%3A%0A%0AHow%20this%20maps%20to%20our%20project%3A%0ATimeline%20or%20launch%3A%0A%0APlease%20let%20me%20know%20a%20good%20time%20for%20a%20quick%20walkthrough.%0A%0AThanks%2C%0A%5BYour%20name%5D" 
+                href="mailto:michael@commitconfidential.com?subject=Sample%20report%20-%20questions&body=Hi%20Commit%20Confidential%2C%0A%0AI%27m%20reviewing%20your%20sample%20report%20and%20had%20a%20few%20questions.%0A%0AWhat%20I%20want%20to%20understand%3A%0A%0AHow%20this%20maps%20to%20our%20project%3A%0ATimeline%20or%20launch%3A%0A%0APlease%20let%20me%20know%20a%20good%20time%20for%20a%20quick%20walkthrough.%0A%0AThanks%2C%0A%5BYour%20name%5D"
               >
                 Ask about this sample
               </a>
@@ -419,5 +436,6 @@
     </footer>
 
   </div>
+    <script src="assets/site.js"></script>
 </body>
 </html>
