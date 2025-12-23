@@ -8,7 +8,7 @@
     name="description"
     content="Commit Confidential runs outside-in audits of open source and developer communities, finding friction, prioritizing impact, and delivering fixes your team can ship."
   >
-    <meta property="og:title" content="Commit Confidential - Signal. Feedback. Improvement.">
+  <meta property="og:title" content="Commit Confidential - Signal. Feedback. Improvement.">
   <meta
     property="og:description"
     content="Commit Confidential runs outside-in audits of open source and developer communities, finding friction, prioritizing impact, and delivering fixes your team can ship."
@@ -26,17 +26,34 @@
     <!-- Header -->
     <header class="site-header">
       <div class="shell site-header-inner">
-          <a class="site-brand" href="https://www.commitconfidential.com" aria-label="Commit Confidential home">
+        <a class="site-brand" href="https://commitconfidential.com/" aria-label="Commit Confidential home">
           <div class="brand-mark">
-          <img src="assets/commit-confidential-hero.png" alt="Commit Confidential hero graphic">
+            <img src="assets/commit-confidential-hero.png" alt="Commit Confidential hero graphic">
           </div>
           <div class="brand-text">
             <span class="brand-name">Commit Confidential</span>
             <span class="brand-tagline">Signal. Feedback. Improvement.</span>
           </div>
-          </a>
+        </a>
 
         <nav class="site-nav" aria-label="Primary">
+          <a href="about.html">About</a>
+          <a href="#process">Process</a>
+          <a href="#deliverables">Deliverables</a>
+          <a href="#services">Services</a>
+          <a href="sample-report.html">Sample report</a>
+          <a href="community.html">Community</a>
+          <a href="#ethics">Ethics</a>
+        </nav>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation" data-nav-toggle>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+        <nav class="mobile-nav-inner" aria-label="Mobile">
           <a href="about.html">About</a>
           <a href="#process">Process</a>
           <a href="#deliverables">Deliverables</a>
@@ -56,7 +73,7 @@
           <div class="hero-inner">
 
             <!-- Main hero content -->
-            <div class="hero-main">  
+            <div class="hero-main">
               <h1 id="hero-title" class="hero-title">Outside-in audits for open source and developer communities</h1>
               <p class="hero-kicker">
                 Built for maintainers, DevRel teams, and open source stewards who seek honest feedback.
@@ -80,14 +97,16 @@
               </ul>
 
               <div class="hero-cta-row">
-              <a
-                class="btn btn-primary"
-                href="mailto:info@commitconfidential.com?subject=Quiet%20audit%20request&body=Hi%20Commit%20Confidential%20team%2C%0A%0AWe%20want%20a%20quiet%20outside-in%20audit.%20Details%20below%3A%0A%0AOrg%20or%20project%3A%0ASurfaces%20we%20care%20about%3A%0AOur%20goal%3A%0APreferred%20timing%3A%0A%0APlease%20confirm%20next%20steps%20and%20a%20short%20call.%0A%0AThanks%2C%0A%5BYour%20name%5D"
-              >
-                Request an audit
-              </a>
+                <a
+                  class="btn btn-primary"
+                  href="https://forms.gle/zzaFRfBkLYontcfm7"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Request an audit
+                </a>
                 <a class="btn btn-secondary" href="#services">
-                  See service tiers
+                  Compare tiers
                 </a>
               </div>
             </div>
@@ -118,7 +137,7 @@
       <!-- Stakes -->
       <section class="section section-problem" aria-labelledby="problem-title">
         <div class="shell">
-                   <div class="panel panel-brief">
+          <div class="panel panel-brief">
             <div class="panel-brief-header">
               <div class="brief-tag">Brief 00</div>
               <h2 id="problem-title" class="section-title">
@@ -184,17 +203,28 @@
               </div>
             </div>
             <div class="brief-cta">
-              <a class="btn btn-primary" href="mailto:info@commitconfidential.com?subject=Quiet%20audit%20-%20start%20the%20process&body=Hi%20Commit%20Confidential%20team%2C%0A%0AWe%20want%20to%20start%20an%20outside-in%20audit.%20Surfaces%20we%20care%20about%3A%0A%0AOrg%20or%20project%3A%0ATimeline%3A%0ASuccess%20looks%20like%3A%0A%0APlease%20confirm%20next%20steps%20and%20a%20time%20for%20a%20short%20call.%0A%0A%5BYour%20name%5D">Start an audit</a>
+              <a
+                class="btn btn-primary"
+                data-obf-email
+                data-user="report"
+                data-domain="commit-confidential"
+                data-tld="org"
+                data-subject="Quiet audit - start the process"
+                data-body="Hi Commit Confidential team,\n\nWe want to start an outside-in audit. Surfaces we care about:\n\nOrg or project:\nTimeline:\nSuccess looks like:\n\nPlease confirm next steps and a time for a short call.\n\n[Your name]"
+                data-display="Email an agent"
+              >
+                report [at] commit-confidential [dot] org
+              </a>
               <a class="btn btn-ghost" href="#services">Compare tiers</a>
             </div>
           </div>
         </div>
       </section>
-      
-            <!-- Deliverables -->
+
+      <!-- Deliverables -->
       <section id="deliverables" class="section section-method" aria-labelledby="deliverables-title">
         <div class="shell">
-            <div class="panel panel-brief">
+          <div class="panel panel-brief">
             <div class="panel-brief-header">
               <div class="brief-tag">Brief 01</div>
               <h2 id="deliverables-title" class="section-title">
@@ -203,7 +233,7 @@
               </h2>
             </div>
 
-                         <div class="brief-grid" aria-label="Audit deliverables">
+            <div class="brief-grid" aria-label="Audit deliverables">
               <div class="brief-item">
                 <h3>Anchored scores</h3>
                 <p>Ratings across access, interaction, process, recognition, and safety with plain-language anchors.</p>
@@ -225,9 +255,11 @@
             <div class="brief-cta">
               <a
                 class="btn btn-primary"
-                href="mailto:info@commitconfidential.com?subject=Operation%20brief%20-%20start%20an%20audit&body=Hi%20Commit%20Confidential%20team%2C%0A%0AWe%20want%20to%20start%20an%20outside-in%20audit.%20Here%27s%20our%20context%3A%0A%0AOrg%20or%20project%20name%3A%0ASurfaces%20you%20care%20about%3A%0APreferred%20timeline%3A%0ASuccess%20looks%20like%3A%0A%0APlease%20confirm%20next%20steps%20and%20a%20time%20for%20a%20quick%20call.%0A%0A%5BYour%20name%5D"
+                href="https://forms.gle/zzaFRfBkLYontcfm7"
+                target="_blank"
+                rel="noreferrer"
               >
-                Start an audit
+                Start with the audit form
               </a>
               <a class="btn btn-ghost" href="sample-report.html">Review a sample report</a>
             </div>
@@ -247,11 +279,11 @@
               pillars, and delivered as a private report you can act on.
             </p>
 
-                          <div class="mission-grid mission-grid-pricing">
-                  <!-- Quick Signal -->
-                  <div class="mission-column pricing-tier">
-                    <h3 class="mission-subtitle">Quick Signal audit</h3>
-                    <p class="mission-price">
+            <div class="mission-grid mission-grid-pricing">
+              <!-- Quick Signal -->
+              <div class="mission-column pricing-tier">
+                <h3 class="mission-subtitle">Quick Signal audit</h3>
+                <p class="mission-price">
                   <strong>$550 USD, flat</strong>
                 </p>
                 <p class="mission-note">
@@ -267,11 +299,17 @@
                 <div class="mission-cta">
                   <a
                     class="btn btn-secondary"
-                                        href="mailto:michael@commitconfidential.com?subject=Quick%20Signal%20audit%20-%20start%20now&body=Hi%20Commit%20Confidential%20team%2C%0A%0AWe%20want%20a%20Quick%20Signal%20audit.%20Here%27s%20our%20context%3A%0A%0ASurface%20or%20repo%3A%0AWhat%20we%20want%20to%20learn%3A%0ADeadline%20or%20launch%20date%3A%0A%0APlease%20confirm%20next%20steps%20and%20when%20you%20can%20start.%0A%0A%5BYour%20name%5D"
+                    data-obf-email
+                    data-user="report"
+                    data-domain="commit-confidential"
+                    data-tld="org"
+                    data-subject="Quick Signal audit - start now"
+                    data-body="Hi Commit Confidential team,\n\nWe want a Quick Signal audit. Here's our context:\n\nSurface or repo:\nWhat we want to learn:\nDeadline or launch date:\n\nPlease confirm next steps and when you can start.\n\n[Your name]"
+                    data-display="Get a Quick Signal"
                   >
-                    Get a Quick Signal
+                    report [at] commit-confidential [dot] org
                   </a>
-                                    <a class="btn btn-ghost" href="sample-report.html">See a sample deliverable</a>
+                  <a class="btn btn-ghost" href="sample-report.html">See a sample deliverable</a>
                 </div>
               </div>
 
@@ -294,9 +332,15 @@
                 <div class="mission-cta">
                   <a
                     class="btn btn-primary btn-buy"
-                     href="mailto:michael@commitconfidential.com?subject=Secret%20Shopper%20audit%20-%20purchase&body=Hi%20Commit%20Confidential%2C%0A%0AWe%27re%20ready%20to%20book%20a%20Secret%20Shopper%20audit.%20Details%20below%3A%0A%0AOrg%20or%20project%20name%3A%0ASurfaces%20in%20scope%20(repos%2Fdocs%2Fcommunity)%3A%0APrimary%20goal%3A%0APreferred%20timeline%3A%0AStakeholders%20to%20loop%20in%3A%0A%0APlease%20confirm%20invoice%20details%20and%20earliest%20start%20date.%0A%0A%5BYour%20name%5D"
+                    data-obf-email
+                    data-user="report"
+                    data-domain="commit-confidential"
+                    data-tld="org"
+                    data-subject="Secret Shopper audit - purchase"
+                    data-body="Hi Commit Confidential,\n\nWe're ready to book a Secret Shopper audit. Details below:\n\nOrg or project name:\nSurfaces in scope (repos/docs/community):\nPrimary goal:\nPreferred timeline:\nStakeholders to loop in:\n\nPlease confirm invoice details and earliest start date.\n\n[Your name]"
+                    data-display="Buy now - Secret Shopper audit"
                   >
-                    Buy now - Secret Shopper audit
+                    report [at] commit-confidential [dot] org
                   </a>
                   <p class="mission-note">
                     Optional, 45 minute readout call for your team, plus $300 USD.
@@ -322,21 +366,39 @@
                 <div class="mission-cta">
                   <a
                     class="btn btn-secondary"
-                 href="mailto:info@commitconfidential.com?subject=Program%20Deep%20Dive%20-%20design%20scope&body=Hi%20Commit%20Confidential%2C%0A%0AWe%20need%20a%20custom%20program%20deep%20dive.%20Here%20are%20the%20essentials%3A%0A%0AOrg%20or%20program%20name%3A%0ASurfaces%20and%20teams%20in%20scope%3A%0AWhat%20we%20want%20to%20improve%3A%0AStakeholders%20and%20decision%20makers%3A%0ADesired%20timeline%3A%0A%0APlease%20share%20the%20right%20starting%20format%20and%20available%20times%20for%20a%20planning%20call.%0A%0A%5BYour%20name%5D"
+                    data-obf-email
+                    data-user="report"
+                    data-domain="commit-confidential"
+                    data-tld="org"
+                    data-subject="Program Deep Dive - design scope"
+                    data-body="Hi Commit Confidential,\n\nWe need a custom program deep dive. Here are the essentials:\n\nOrg or program name:\nSurfaces and teams in scope:\nWhat we want to improve:\nStakeholders and decision makers:\nDesired timeline:\n\nPlease share the right starting format and available times for a planning call.\n\n[Your name]"
+                    data-display="Design a deep dive"
                   >
-                    Design a deep dive
+                    report [at] commit-confidential [dot] org
                   </a>
                   <a
                     class="btn btn-ghost"
-                    href="mailto:info@commitconfidential.com?subject=Program%20deep%20dive%20-%20talk%20first&body=Hi%20Commit%20Confidential%20team%2C%0A%0AWe%27re%20considering%20a%20program-level%20engagement%20and%20would%20like%20a%20short%20call%20to%20validate%20fit%20and%20scope.%0A%0AOrg%20or%20program%20name%3A%0AKey%20surfaces%20or%20channels%3A%0ATimeline%3A%0AWho%27s%20on%20the%20call%3A%0A%0APlease%20send%20two%20or%20three%20times%20that%20work.%0A%0AThank%20you%2C%0A%5BYour%20name%5D"
+                    data-obf-email
+                    data-user="report"
+                    data-domain="commit-confidential"
+                    data-tld="org"
+                    data-subject="Program deep dive - talk first"
+                    data-body="Hi Commit Confidential team,\n\nWe're considering a program-level engagement and would like a short call to validate fit and scope.\n\nOrg or program name:\nKey surfaces or channels:\nTimeline:\nWho's on the call:\n\nPlease send two or three times that work.\n\nThank you,\n[Your name]"
+                    data-display="Talk to an agent first"
                   >
-                    Talk to an agent first
+                    report [at] commit-confidential [dot] org
                   </a>
                   <a
                     class="btn btn-ghost"
-                    href="mailto:info@commitconfidential.com?subject=Program%20Deep%20Dive%20Inquiry&body=Hi%20Commit%20Confidential%20team%2C%20I%20would%20like%20to%20schedule%20a%20deep%20dive%20into%20your%20secret%20shopper%20audit%20program.%0D%0A%0D%0AWe%20are%20a%20%5Bbrief%20description%20of%20your%20org%5D%2C%20and%20I%20am%20especially%20interested%20in%20how%20your%20outside%20in%20review%20would%20apply%20to%20our%20community.%0D%0A%0D%0ACould%20you%20share%20next%20steps%20and%20a%20few%20time%20options%20for%20a%20call%20in%20the%20next%20two%20weeks%3F"
+                    data-obf-email
+                    data-user="report"
+                    data-domain="commit-confidential"
+                    data-tld="org"
+                    data-subject="Program Deep Dive Inquiry"
+                    data-body="Hi Commit Confidential team, I would like to schedule a deep dive into your secret shopper audit program.\n\nWe are a [brief description of your org], and I am especially interested in how your outside in review would apply to our community.\n\nCould you share next steps and a few time options for a call in the next two weeks?"
+                    data-display="Email us about a deep dive"
                   >
-                    Email us about a deep dive
+                    report [at] commit-confidential [dot] org
                   </a>
                 </div>
               </div>
@@ -396,7 +458,18 @@
               <div class="engagement-item">
                 <h3>Book a 20–30 minute intro</h3>
                 <p>We align on goals, scope, and surfaces in play. No sales script—just enough detail to run the mission.</p>
-                <a class="btn btn-secondary" href="mailto:info@commitconfidential.com?subject=Intro%20call%20-%20quiet%20audit&body=Hi%20Commit%20Confidential%20team%2C%0A%0AWe%27d%20like%20to%20book%20a%2020%E2%80%9330%20minute%20intro%20call%20to%20see%20if%20your%20Secret%20Shopper%20audit%20fits%20our%20community.%0A%0AOrg%20or%20project%3A%0ASurfaces%20we%20care%20about%3A%0AOur%20goal%20for%20the%20audit%3A%0ATiming%3A%0A%0APlease%20reply%20with%20two%20or%20three%20time%20options%20and%20anything%20you%20need%20from%20us%20before%20we%20meet.%0A%0AThanks%2C%0A%5BYour%20name%5D">Book an intro call</a>
+                <a
+                  class="btn btn-secondary"
+                  data-obf-email
+                  data-user="report"
+                  data-domain="commit-confidential"
+                  data-tld="org"
+                  data-subject="Intro call - quiet audit"
+                  data-body="Hi Commit Confidential team,\n\nWe'd like to book a 20–30 minute intro call to see if your Secret Shopper audit fits our community.\n\nOrg or project:\nSurfaces we care about:\nOur goal for the audit:\nTiming:\n\nPlease reply with two or three time options and anything you need from us before we meet.\n\nThanks,\n[Your name]"
+                  data-display="Book an intro call"
+                >
+                  report [at] commit-confidential [dot] org
+                </a>
               </div>
               <div class="engagement-item">
                 <h3>We run the audit quietly</h3>
@@ -405,13 +478,23 @@
               <div class="engagement-item">
                 <h3>Decide your rollout</h3>
                 <p>Ship quick wins, share a sanitized readout, or engage us for a deeper program review. You stay in control of visibility.</p>
-                <a class="btn btn-ghost" href="mailto:info@commitconfidential.com?subject=Community%20program%20support">Ask about follow-on support</a>
+                <a
+                  class="btn btn-ghost"
+                  data-obf-email
+                  data-user="report"
+                  data-domain="commit-confidential"
+                  data-tld="org"
+                  data-subject="Community program support"
+                  data-display="Ask about follow-on support"
+                >
+                  report [at] commit-confidential [dot] org
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
+
       <!-- Ethics -->
       <section id="ethics" class="section section-ethics">
         <div class="shell">
@@ -427,7 +510,7 @@
       </section>
 
       <!-- Most wanted -->
-      <<section class="section section-most-wanted" aria-labelledby="targets-title">
+      <section class="section section-most-wanted" aria-labelledby="targets-title">
         <div class="shell">
           <div class="panel panel-tackboard">
             <h2 id="targets-title" class="section-title">Most wanted - targets for insight</h2>
@@ -455,27 +538,84 @@
               <li>
                 <span class="target-pin" aria-hidden="true">•</span>
                 <span class="target-name">Add your candidate</span>
-                <span class="target-note">report@commit-confidential.org</span>
+                <a
+                  class="target-note"
+                  data-obf-email
+                  data-user="report"
+                  data-domain="commit-confidential"
+                  data-tld="org"
+                  data-subject="Most wanted candidate"
+                  data-display="Share a candidate"
+                >
+                  report [at] commit-confidential [dot] org
+                </a>
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-              <!-- Final CTA -->
+      <!-- FAQ -->
+      <section id="faq" class="section section-faq" aria-labelledby="faq-title">
+        <div class="shell">
+          <div class="panel panel-brief faq-panel">
+            <div class="panel-brief-header">
+              <div class="brief-tag">Brief 04</div>
+              <h2 id="faq-title" class="section-title">
+                <span class="title-redaction" aria-hidden="true"></span>
+                <span>FAQ</span>
+              </h2>
+            </div>
+            <div class="faq-list">
+              <details>
+                <summary>What surfaces do you review?</summary>
+                <p>Docs, repos, issue flows, community channels, onboarding paths, and anything new contributors touch first.</p>
+              </details>
+              <details>
+                <summary>How long does an audit take?</summary>
+                <p>Quick Signal runs in days. Full Secret Shopper journeys typically ship in 2–3 weeks depending on scope.</p>
+              </details>
+              <details>
+                <summary>How do you keep this confidential?</summary>
+                <p>We operate quietly, avoid public call-outs, and deliver findings only to your designated stakeholders.</p>
+              </details>
+              <details>
+                <summary>What about pricing and invoicing?</summary>
+                <p>Tier pricing is listed above. We invoice on booking, with flexible timing for program-wide work.</p>
+              </details>
+              <details>
+                <summary>What deliverables do we receive?</summary>
+                <p>A classified-style report, a prioritized backlog, and optional readout for your team.</p>
+              </details>
+              <details>
+                <summary>How do we start?</summary>
+                <p>Use the audit form or email a field agent to scope the mission and lock a timeline.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
       <section class="section section-final-cta" aria-labelledby="final-cta-title">
         <div class="shell">
           <div class="panel callout">
             <h2 id="final-cta-title" class="section-title">Ready for a quiet read on your community?</h2>
             <p class="section-body">Send the surfaces you care about most. We’ll confirm scope, schedule, and start the mission.</p>
             <div class="hero-cta-row" style="margin-top: 1.25rem;">
-              <a class="btn btn-primary" href="mailto:info@commitconfidential.com?subject=Quiet%20audit%20request&body=Hi%20Commit%20Confidential%2C%0A%0AWe%20want%20a%20quiet%20audit%20of%20our%20community.%20Here%20are%20the%20essentials%3A%0A%0AOrg%20or%20project%3A%0ASurfaces%20to%20prioritize%3A%0AWhy%20now%3A%0APreferred%20timing%3A%0A%0APlease%20confirm%20next%20steps%20and%20any%20prep%20we%20should%20do.%0A%0AThanks%2C%0A%5BYour%20name%5D">Request a quiet audit</a>
+              <a
+                class="btn btn-primary"
+                href="https://forms.gle/zzaFRfBkLYontcfm7"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Request a quiet audit
+              </a>
               <a class="btn btn-secondary" href="sample-report.html">See the sample report</a>
             </div>
           </div>
         </div>
       </section>
-
 
     </main>
 
