@@ -17,7 +17,7 @@
     <!-- Header -->
     <header class="site-header">
       <div class="shell site-header-inner">
-        <a class="site-brand" href="https://www.commitconfidential.com" aria-label="Commit Confidential home">
+        <a class="site-brand" href="https://commitconfidential.com/" aria-label="Commit Confidential home">
           <div class="brand-mark">
             <img src="assets/commit-confidential-hero.png" alt="Commit Confidential hero graphic">
           </div>
@@ -30,7 +30,23 @@
         <nav class="site-nav" aria-label="Primary">
           <a href="about.html">About</a>
           <a href="index.html#process">Audit</a>
-           <a href="community.html#agents">Agents</a>
+          <a href="community.html#agents">Agents</a>
+          <a href="sample-report.html" aria-current="page">Sample report</a>
+          <a href="community.html">Community</a>
+          <a href="index.html#ethics">Ethics</a>
+        </nav>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation" data-nav-toggle>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+        <nav class="mobile-nav-inner" aria-label="Mobile">
+          <a href="about.html">About</a>
+          <a href="index.html#process">Audit</a>
+          <a href="community.html#agents">Agents</a>
           <a href="sample-report.html" aria-current="page">Sample report</a>
           <a href="community.html">Community</a>
           <a href="index.html#ethics">Ethics</a>
@@ -54,7 +70,7 @@
             <p class="section-body" style="margin-bottom: 1.4rem;">
               Every mission runs through five pillars of contributor health
               access, interaction, process, recognition, and safety and governance
-              with anchored scores from 1 to 5, concrete observations, and a final reflection. 
+              with anchored scores from 1 to 5, concrete observations, and a final reflection.
             </p>
 
             <div class="hero-cta-row template-gate" id="template-gate">
@@ -77,12 +93,18 @@
                   <span class="gate-status success">Unlocked</span>
                 </div>
               </div>
-              
+
               <a
                 class="btn btn-secondary"
-                href="mailto:michael@commitconfidential.com?subject=Sample%20report%20-%20questions&body=Hi%20Commit%20Confidential%2C%0A%0AI%27m%20reviewing%20your%20sample%20report%20and%20had%20a%20few%20questions.%0A%0AWhat%20I%20want%20to%20understand%3A%0A%0AHow%20this%20maps%20to%20our%20project%3A%0ATimeline%20or%20launch%3A%0A%0APlease%20let%20me%20know%20a%20good%20time%20for%20a%20quick%20walkthrough.%0A%0AThanks%2C%0A%5BYour%20name%5D"
+                data-obf-email
+                data-user="report"
+                data-domain="commit-confidential"
+                data-tld="org"
+                data-subject="Sample report - questions"
+                data-body="Hi Commit Confidential,\n\nI'm reviewing your sample report and had a few questions.\n\nWhat I want to understand:\n\nHow this maps to our project:\nTimeline or launch:\n\nPlease let me know a good time for a quick walkthrough.\n\nThanks,\n[Your name]"
+                data-display="Ask about this sample"
               >
-                Ask about this sample
+                report [at] commit-confidential [dot] org
               </a>
             </div>
 
@@ -169,7 +191,7 @@
                   </li>
                 </ol>
               </section>
-              
+
               <!-- Access -->
               <section class="sample-report-section">
                 <h2>1. ACCESS (Entry and onboarding)</h2>
@@ -203,7 +225,7 @@
                   a first time contributor is the scattered information. Most of the right steps exist, but a newcomer
                   has to jump between README, docs site, and old issues to piece them together.
                 </p>
-                
+
                 <h3>Recommended actions</h3>
                 <ul>
                   <li>
@@ -292,7 +314,7 @@
                   is that some written rules and real practice have drifted apart. A short review and refresh of CONTRIBUTING and label definitions
                   would reduce confusion and help others help maintainers.
                 </p>
-                
+
                 <h3>Recommended actions</h3>
                 <ul>
                   <li>Update CONTRIBUTING.md to align with current review cadence and expectations.</li>
@@ -332,7 +354,7 @@
                   A few low effort rituals, for example naming first time contributors in release notes or a monthly "new contributors" thread,
                   would make it easier for people to feel invited back.
                 </p>
-                
+
                 <h3>Recommended actions</h3>
                 <ul>
                   <li>Add a “New contributors” section to release notes naming people, not just features.</li>
@@ -371,7 +393,7 @@
                   Safety and governance feel intentional. The risk is mostly around keeping governance documents fresh. At current size, the project is stable.
                   If growth accelerates, you will likely need clearer escalation paths and explicit expectations for new maintainers.
                 </p>
-                
+
                 <h3>Recommended actions</h3>
                 <ul>
                   <li>Add an “Escalation path” bullet list to the CoC or governance doc.</li>
@@ -436,6 +458,6 @@
     </footer>
 
   </div>
-    <script src="assets/site.js"></script>
+  <script src="assets/site.js"></script>
 </body>
 </html>
