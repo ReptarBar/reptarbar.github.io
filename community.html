@@ -16,7 +16,7 @@
 
     <header class="site-header">
       <div class="shell site-header-inner">
-        <a class="site-brand" href="https://www.commitconfidential.com" aria-label="Commit Confidential home">
+        <a class="site-brand" href="https://commitconfidential.com/" aria-label="Commit Confidential home">
           <div class="brand-mark">
             <img src="assets/commit-confidential-hero.png" alt="Commit Confidential hero graphic">
           </div>
@@ -27,6 +27,22 @@
         </a>
 
         <nav class="site-nav" aria-label="Primary">
+          <a href="about.html">About</a>
+          <a href="index.html#process">Audit</a>
+          <a href="#agents">Agents</a>
+          <a href="sample-report.html">Sample report</a>
+          <a href="community.html" aria-current="page">Community</a>
+          <a href="index.html#ethics">Ethics</a>
+        </nav>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation" data-nav-toggle>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+        <nav class="mobile-nav-inner" aria-label="Mobile">
           <a href="about.html">About</a>
           <a href="index.html#process">Audit</a>
           <a href="#agents">Agents</a>
@@ -54,15 +70,26 @@
             <div class="hero-cta-row">
               <a
                 class="btn btn-primary"
-                href="mailto:michael@commitconfidential.com?subject=Community%20early%20access"
+                data-obf-email
+                data-user="report"
+                data-domain="commit-confidential"
+                data-tld="org"
+                data-subject="Community early access"
+                data-display="Request early access"
               >
-                Request early access
+                report [at] commit-confidential [dot] org
               </a>
               <a
                 class="btn btn-secondary"
-                href="mailto:michael@commitconfidential.com?subject=Community%20-%20who%20I%20am&body=Hi%20Commit%20Confidential%2C%0A%0AHere%27s%20a%20quick%20profile%20for%20your%20community%20list.%0A%0AName%20or%20alias%3A%0ALocation%3A%0AWhat%20I%20work%20on%3A%0AHow%20I%20support%20communities%3A%0AOne%20thing%20I%27d%20share%20or%20teach%3A%0A%0ALet%20me%20know%20if%20you%20need%20anything%20else.%0A%0A%5BYour%20name%5D"
+                data-obf-email
+                data-user="report"
+                data-domain="commit-confidential"
+                data-tld="org"
+                data-subject="Community - who I am"
+                data-body="Hi Commit Confidential,\n\nHere's a quick profile for your community list.\n\nName or alias:\nLocation:\nWhat I work on:\nHow I support communities:\nOne thing I'd share or teach:\n\nLet me know if you need anything else.\n\n[Your name]"
+                data-display="Tell you who I am"
               >
-                Tell you who I am
+                report [at] commit-confidential [dot] org
               </a>
             </div>
 
@@ -73,7 +100,7 @@
         </div>
       </section>
 
-     <section class="section section-callout">
+      <section class="section section-callout">
         <div class="shell">
           <div class="panel callout">
             <div class="callout-label">Field briefing</div>
@@ -88,7 +115,6 @@
         </div>
       </section>
 
-      
       <section id="agents" class="section section-submit">
         <div class="shell">
           <div class="panel panel-submit">
@@ -101,16 +127,29 @@
               <a class="btn btn-primary" href="https://forms.gle/CaibHpYWpKjhevXi9" target="_blank" rel="noreferrer">
                 Submit via Google Form
               </a>
-                 <a
+              <a
                 class="btn btn-secondary"
-                href="mailto:report@commit-confidential.org?subject=Agent%20Field%20Report&body=Agent%20ID%20(if%20assigned)%3A%0AMission%20or%20community%3A%0AObservations%20(high-level)%3A%0AKey%203%20issues%3A%0AEvidence%20or%20links%3A%0ASafety%20notes%20(if%20any)%3A%0A%0ATell%20us%20if%20you%20want%20follow-up%20or%20to%20stay%20anonymous."
+                data-obf-email
+                data-user="report"
+                data-domain="commit-confidential"
+                data-tld="org"
+                data-subject="Agent Field Report"
+                data-body="Agent ID (if assigned):\nMission or community:\nObservations (high-level):\nKey 3 issues:\nEvidence or links:\nSafety notes (if any):\n\nTell us if you want follow-up or to stay anonymous."
+                data-display="Email your report"
               >
-                Email your report
+                report [at] commit-confidential [dot] org
               </a>
-                            <a
+              <a
                 class="btn btn-ghost"
-                href="mailto:AgentID@commit-confidential.org?subject=Agent%20ID%20request&body=Hi%20Commit%20Confidential%2C%0A%0AI%20need%20an%20Agent%20ID%20for%20field%20reporting.%0A%0AName%20or%20handle%3A%0ACommunity%20focus%3A%0AExperience%20doing%20reviews%3A%0AAny%20safety%20constraints%3A%0A%0AThanks%2C%0A%5BYour%20name%20or%20alias%5D"
+                data-obf-email
+                data-user="AgentID"
+                data-domain="commit-confidential"
+                data-tld="org"
+                data-subject="Agent ID request"
+                data-body="Hi Commit Confidential,\n\nI need an Agent ID for field reporting.\n\nName or handle:\nCommunity focus:\nExperience doing reviews:\nAny safety constraints:\n\nThanks,\n[Your name or alias]"
+                data-display="Request an Agent ID"
               >
+                AgentID [at] commit-confidential [dot] org
               </a>
               <a class="btn btn-ghost" href="report-template.md">
                 Download markdown template
