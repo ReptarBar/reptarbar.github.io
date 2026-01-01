@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Commit Confidential — Anonymous Field Reports</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Submit structured, anonymous field reports about friction in developer and open source communities."
+  >
+  <link rel="icon" type="image/png" href="../assets/commit-confidential-hero.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <header class="site-header">
+      <div class="shell site-header-inner">
+        <a class="site-brand" href="https://www.commitconfidential.com" aria-label="Commit Confidential home">
+          <div class="brand-mark">
+            <img src="../assets/commit-confidential-hero.png" alt="Commit Confidential hero graphic">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Commit Confidential</span>
+            <span class="brand-tagline">Signal. Feedback. Improvement.</span>
+          </div>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href="../about.html">About</a>
+          <a href="../index.html#process">Audit</a>
+          <a href="#agents" aria-current="page">Agents</a>
+          <a href="../sample-report.html">Sample report</a>
+          <a href="../index.html#ethics">Ethics</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section community-hero">
+        <div class="shell">
+          <div class="panel panel-community">
+            <h1 class="hero-title">Anonymous Field Reports</h1>
+            <p class="section-body">
+              This is a structured field report. No personal names, accusations, or private details allowed. All
+              submissions are anonymized and reviewed before analysis. We collect friction signals—not gossip.
+            </p>
+            <p class="section-body">
+              Every field is required unless marked optional. Submissions are validated for redaction before they are
+              accepted. Nothing links back to you: we do not store IP addresses or browser fingerprints.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="agents" class="section">
+        <div class="shell">
+          <div class="panel report-intake">
+            <div class="report-banner" aria-live="polite">Classified: Field Report Intake</div>
+
+            <div class="accordion" data-accordion>
+              <div class="accordion-item is-open">
+                <button class="accordion-title" type="button" aria-expanded="true">
+                  Context & Entry
+                  <span aria-hidden="true">▾</span>
+                </button>
+                <div class="accordion-content" style="display: block;">
+                  <form id="field-report-form" class="report-form" novalidate>
+                    <p class="section-intro">
+                      Provide clear, depersonalized details. Describe behaviors, systems, and workflows—not specific
+                      individuals.
+                    </p>
+
+                    <h3 class="report-section-title">Community profile</h3>
+                    <label for="community-type">Type of community</label>
+                    <select id="community-type" name="communityType" required>
+                      <option value="">Select a community type</option>
+                      <option>Open source project</option>
+                      <option>Foundation or standards body</option>
+                      <option>Vendor-led developer program</option>
+                      <option>Startup product community</option>
+                      <option>Enterprise developer community</option>
+                      <option>Education / learning cohort</option>
+                      <option>Other</option>
+                    </select>
+
+                    <label for="role">Role in interaction</label>
+                    <select id="role" name="role" required>
+                      <option value="">Select your role</option>
+                      <option>First-time contributor</option>
+                      <option>Recurring contributor</option>
+                      <option>Maintainer</option>
+                      <option>Community manager</option>
+                      <option>User / adopter</option>
+                      <option>Partner</option>
+                      <option>Observer</option>
+                    </select>
+
+                    <label for="entry-point">Entry point</label>
+                    <select id="entry-point" name="entryPoint" required>
+                      <option value="">Where did you enter?</option>
+                      <option>Issue tracker</option>
+                      <option>Pull request / code review</option>
+                      <option>Chat (Slack/Discord/Mattermost)</option>
+                      <option>Forum / discussion board</option>
+                      <option>Documentation</option>
+                      <option>Event or livestream</option>
+                      <option>Social channel</option>
+                      <option>Other</option>
+                    </select>
+
+                    <h3 class="report-section-title">Friction encountered</h3>
+                    <div class="checkbox-group" role="group" aria-labelledby="friction-label">
+                      <span id="friction-label" class="visually-hidden">Friction encountered</span>
+                      <label><input type="checkbox" name="frictionEncountered" value="Onboarding unclear"> Onboarding unclear</label>
+                      <label><input type="checkbox" name="frictionEncountered" value="Maintainer unresponsive"> Maintainer unresponsive</label>
+                      <label><input type="checkbox" name="frictionEncountered" value="Rude or dismissive tone"> Rude or dismissive tone</label>
+                      <label><input type="checkbox" name="frictionEncountered" value="Process changed without notice"> Process changed without notice</label>
+                      <label><input type="checkbox" name="frictionEncountered" value="Docs / guidance missing"> Docs / guidance missing</label>
+                      <label><input type="checkbox" name="frictionEncountered" value="Gate kept / closed off"> Gate kept / closed off</label>
+                      <label><input type="checkbox" name="frictionEncountered" value="Safety concern"> Safety concern</label>
+                      <label><input type="checkbox" name="frictionEncountered" value="Other friction"> Other friction</label>
+                    </div>
+
+                    <label for="sequence">Sequence of events</label>
+                    <textarea id="sequence" name="sequenceOfEvents" required placeholder="Step-by-step timeline. Keep it factual."></textarea>
+
+                    <h3 class="report-section-title">Expectations & impact</h3>
+                    <label for="unmet-expectation">Unmet expectation</label>
+                    <textarea id="unmet-expectation" name="unmetExpectation" required placeholder="What you expected to happen versus what occurred."></textarea>
+
+                    <label for="impact">Impact</label>
+                    <div class="checkbox-group" role="group" aria-labelledby="impact-label">
+                      <span id="impact-label" class="visually-hidden">Impact</span>
+                      <label><input type="checkbox" name="impact" value="Time lost"> Time lost</label>
+                      <label><input type="checkbox" name="impact" value="Blocked release or deliverable"> Blocked release or deliverable</label>
+                      <label><input type="checkbox" name="impact" value="Trust decreased"> Trust decreased</label>
+                      <label><input type="checkbox" name="impact" value="Safety risk perceived"> Safety risk perceived</label>
+                      <label><input type="checkbox" name="impact" value="Left the community"> Left the community</label>
+                      <label><input type="checkbox" name="impact" value="Other impact"> Other impact</label>
+                    </div>
+
+                    <label for="root-cause">Perceived root cause</label>
+                    <select id="root-cause" name="perceivedRootCause" required>
+                      <option value="">Select a root cause</option>
+                      <option>Missing process or SOP</option>
+                      <option>Overload / not enough maintainers</option>
+                      <option>Tooling or platform issue</option>
+                      <option>Expectations misaligned</option>
+                      <option>Lack of moderation</option>
+                      <option>Role clarity unclear</option>
+                      <option>Incentives misaligned</option>
+                      <option>Other</option>
+                    </select>
+
+                    <label for="resolution">Resolution attempt</label>
+                    <textarea id="resolution" name="resolutionAttempt" required placeholder="Actions taken to resolve the friction."></textarea>
+
+                    <label>Pattern recurrence</label>
+                    <div class="radio-row">
+                      <label><input type="radio" name="patternRecurrence" value="First occurrence" required> First occurrence</label>
+                      <label><input type="radio" name="patternRecurrence" value="Happens sometimes" required> Happens sometimes</label>
+                      <label><input type="radio" name="patternRecurrence" value="Repeated pattern" required> Repeated pattern</label>
+                    </div>
+
+                    <label for="suggested-improvement">Suggested improvement</label>
+                    <select id="suggested-improvement" name="suggestedImprovement" required>
+                      <option value="">Select an improvement</option>
+                      <option>Publish clearer steps</option>
+                      <option>Faster triage or SLAs</option>
+                      <option>Dedicated moderator / facilitator</option>
+                      <option>Contributor onboarding kit</option>
+                      <option>Escalation path visibility</option>
+                      <option>More maintainers / resourcing</option>
+                      <option>Code of conduct enforcement</option>
+                      <option>Other improvement</option>
+                    </select>
+
+                    <label for="positive-notes">What they did well (optional)</label>
+                    <textarea id="positive-notes" name="positiveNotes" placeholder="Optional: note strengths that should continue."></textarea>
+
+                    <h3 class="report-section-title">Redaction & consent</h3>
+                    <div class="checkbox-group">
+                      <label><input type="checkbox" name="redaction" value="No personal names included" required> I removed personal names and @handles.</label>
+                      <label><input type="checkbox" name="redaction" value="No contact details" required> No emails, URLs, or contact details are included.</label>
+                      <label><input type="checkbox" name="redaction" value="Behavior only" required> I described behaviors and systems, not accusations.</label>
+                    </div>
+
+                    <label>Permission for anonymized use</label>
+                    <div class="radio-row">
+                      <label><input type="radio" name="permission" value="Yes" required> Yes, anonymized trends only</label>
+                      <label><input type="radio" name="permission" value="No" required> No, hold for internal review only</label>
+                    </div>
+
+                    <div class="redaction-warning" id="redaction-warning" role="alert">
+                      Please remove personal identifiers. Field Reports may only describe observable community behaviors,
+                      not individuals.
+                    </div>
+
+                    <p class="section-footnote">
+                      Validation is required before submission. Submissions that contain personal identifiers or
+                      accusatory language are automatically blocked.
+                    </p>
+
+                    <button type="submit" class="report-submit-btn">Submit Anonymous Field Report</button>
+                    <div class="submission-status" aria-live="polite"></div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-title" type="button" aria-expanded="false">
+                  Why this format
+                  <span aria-hidden="true">▾</span>
+                </button>
+                <div class="accordion-content">
+                  <p>
+                    This is an intelligence-gathering pipeline. Field reports are synthesized quarterly to produce
+                    trend analysis and pattern maps that improve community health. The structure keeps submissions
+                    uniform and reduces ambiguity.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-title" type="button" aria-expanded="false">
+                  Data handling
+                  <span aria-hidden="true">▾</span>
+                </button>
+                <div class="accordion-content">
+                  <ul>
+                    <li>We do not store IP addresses or browser fingerprints.</li>
+                    <li>Only sanitized field values and a timestamp are written to storage.</li>
+                    <li>Reports are reviewed for redaction compliance before synthesis.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div id="report-confirmation" class="report-confirmation" hidden>
+              <h2>Report received</h2>
+              <p>
+                Your Field Report has been securely submitted. Commit Confidential reviews trends quarterly. Thank you
+                for contributing to clearer community intelligence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer-inner">
+        <p>© Commit Confidential. Built with care. Keep it kind.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="form.js"></script>
+  <script src="../assets/site.js"></script>
+</body>
+</html>
