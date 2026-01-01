@@ -5,8 +5,13 @@ const router = express.Router();
 
 const redactionPatterns = [
   /@\w+/, // @handles
-  /\b[A-Z][a-z]+\s[A-Z][a-z]+\b/,
-  /\b([A-Z][a-z]+){1}\b/,
+// Two-part names, optional hyphen or apostrophe, and require length so “The” does not match.
+const FULL_NAME =
+  /\b[A-Z][a-z]{2,}(?:[-'][A-Z][a-z]{2,})?\s+[A-Z][a-z]{2,}(?:[-'][A-Z][a-z]{2,})?\b/;
+
+// Titled single name, still a strong signal.
+const TITLED_NAME =
+  /\b(?:Mr|Mrs|Ms|Miss|Dr|Prof)\.?\s+[A-Z][a-z]{2,}\b/;
   /[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}/,
   /https?:\/\//i,
   /\b(harassed|abused|threatened|assaulted|retaliated|bullied|slandered)\b/i,
