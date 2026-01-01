@@ -1,0 +1,247 @@
+/* ============================================
+   COMMIT CONFIDENTIAL — FIELD REPORT INTAKE UI
+   ============================================ */
+
+.community-hero .panel-community {
+  margin-bottom: 1.5rem;
+}
+
+.section-intro,
+.section-footnote {
+  color: var(--text-muted);
+}
+
+.report-intake {
+  margin-top: 2.4rem;
+  padding: 1.8rem 2rem;
+  border-radius: var(--radius-xl);
+  background: radial-gradient(circle at top left,
+              rgba(248, 113, 113, 0.16),
+              var(--bg-panel) 60%);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Classified banner */
+.report-banner {
+  background: #ef4444;
+  color: #05070b;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 0 26px rgba(239, 68, 68, 0.4);
+}
+
+/* Section headings */
+.report-section-title {
+  margin: 2rem 0 0.75rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* Labels */
+.report-form label {
+  display: block;
+  margin: 1.1rem 0 0.35rem;
+  font-size: 0.9rem;
+  color: var(--text-softer);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Inputs, selects, textareas */
+.report-form input[type="text"],
+.report-form textarea,
+.report-form select {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.92rem;
+  color: var(--text-main);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.report-form input:focus,
+.report-form textarea:focus,
+.report-form select:focus {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* Textareas */
+.report-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Checkbox groups */
+.checkbox-group {
+  margin: 0.6rem 0 1rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-transform: none;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.checkbox-group input[type="checkbox"] {
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* Radio rows */
+.radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.4rem 0 1rem;
+}
+
+.radio-row label {
+  text-transform: none;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.radio-row input[type="radio"] {
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* Redaction warning */
+.redaction-warning {
+  display: none; /* toggled by JS */
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  margin-top: 1rem;
+}
+
+/* Accordion wrapper */
+.accordion {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(148,163,184,0.25);
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(148,163,184,0.25);
+}
+
+.accordion-title {
+  padding: 1rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.accordion-title:hover {
+  color: var(--accent);
+}
+
+.accordion-content {
+  display: none;
+  padding: 0.5rem 0 1.2rem;
+  color: var(--text-muted);
+}
+
+.accordion-item.is-open .accordion-content {
+  display: block;
+}
+
+/* Submit button */
+.report-submit-btn {
+  margin-top: 2.2rem;
+  width: 100%;
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #05070b;
+  font-weight: 800;
+  padding: 0.9rem 1.2rem;
+  border-radius: var(--radius-xl);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  box-shadow: 0 16px 40px rgba(239, 68, 68, 0.35);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.report-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(239, 68, 68, 0.45);
+}
+
+.report-submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 14px 28px rgba(239, 68, 68, 0.35);
+}
+
+/* Confirmation screen */
+.report-confirmation {
+  text-align: center;
+  padding: 2.8rem 1.2rem;
+}
+
+.report-confirmation h2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+.report-confirmation p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.submission-status {
+  margin-top: 1rem;
+  color: var(--text-muted);
+}
+
+.submission-status.success {
+  color: var(--accent);
+}
+
+.submission-status.error {
+  color: #ef4444;
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  .radio-row {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .report-intake {
+    padding: 1.4rem 1.3rem;
+  }
+}
