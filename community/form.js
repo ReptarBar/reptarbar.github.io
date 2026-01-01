@@ -7,10 +7,18 @@
     }
   };
 
+  // Two-part names with optional hyphen or apostrophe, avoids single-word false positives.
+  // Examples matched: "John Smith", "Mary-Jane O'Neil"
+  const FULL_NAME =
+    /\b[A-Z][a-z]{2,}(?:[-'][A-Z][a-z]{2,})?\s+[A-Z][a-z]{2,}(?:[-'][A-Z][a-z]{2,})?\b/;
+
+  // Titled single names (e.g., "Dr Smith") that still imply identity.
+  const TITLED_NAME = /\b(?:Mr|Mrs|Ms|Miss|Dr|Prof)\.?\s+[A-Z][a-z]{2,}\b/;
+
   const redactionPatterns = [
     /@\w+/, // @handles
-    /\b[A-Z][a-z]+\s[A-Z][a-z]+\b/, // Proper names (simple heuristic)
-    /\b([A-Z][a-z]+){1}\b/, // Single capitalized name
+    FULL_NAME,
+    TITLED_NAME,
     /[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}/, // Emails
     /https?:\/\//i, // URLs
     /\b(harassed|abused|threatened|assaulted|retaliated|bullied|slandered)\b/i, // accusatory terms
