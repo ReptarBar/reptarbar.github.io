@@ -7,9 +7,12 @@
     }
   };
 
-  // Two-part names with optional hyphen or apostrophe; avoids single-word false positives.
-  const FULL_NAME = /\b[A-Z][a-z]{2,}(?:[-'][A-Z][a-z]{2,})?\s+[A-Z][a-z]{2,}(?:[-'][A-Z][a-z]{2,})?\b/;
-  // Titled single names (e.g., Dr Smith) that still imply identity.
+  // Two-part names with optional hyphen or apostrophe, avoids single-word false positives.
+  // Examples matched: "John Smith", "Mary-Jane O'Neil"
+  const FULL_NAME =
+    /\b[A-Z][a-z]{2,}(?:[-'][A-Z][a-z]{2,})?\s+[A-Z][a-z]{2,}(?:[-'][A-Z][a-z]{2,})?\b/;
+
+  // Titled single names (e.g., "Dr Smith") that still imply identity.
   const TITLED_NAME = /\b(?:Mr|Mrs|Ms|Miss|Dr|Prof)\.?\s+[A-Z][a-z]{2,}\b/;
 
   const redactionPatterns = [
