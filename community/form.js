@@ -7,37 +7,6 @@
     }
   };
 
-  // Two-part names with optional hyphen or apostrophe, avoids single-word false positives.
-  // Examples matched: "John Smith", "Mary-Jane O'Neil"
-  const FULL_NAME =
-    /\b[A-Z][a-z]{2,}(?:[-'][A-Z][a-z]{2,})?\s+[A-Z][a-z]{2,}(?:[-'][A-Z][a-z]{2,})?\b/;
-
-  // Titled single names (e.g., "Dr Smith") that still imply identity.
-  const TITLED_NAME = /\b(?:Mr|Mrs|Ms|Miss|Dr|Prof)\.?\s+[A-Z][a-z]{2,}\b/;
-
-  const redactionPatterns = [
-    /@\w+/, // @handles
-    FULL_NAME,
-    TITLED_NAME,
-    /[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}/, // Emails
-    /https?:\/\//i, // URLs
-    /\b(harassed|abused|threatened|assaulted|retaliated|bullied|slandered)\b/i, // accusatory terms
-  ];
-
-  const validateRedaction = (formData) => {
-    const textFields = [
-      'sequenceOfEvents',
-      'unmetExpectation',
-      'resolutionAttempt',
-      'positiveNotes',
-    ];
-    return textFields.every((field) => {
-      const value = (formData.get(field) || '').trim();
-      if (!value) return field === 'positiveNotes';
-      return !redactionPatterns.some((pattern) => pattern.test(value));
-    });
-  };
-
   const serializeForm = (form) => {
     const data = new FormData(form);
     const checkedValues = (name) => data.getAll(name);
@@ -77,7 +46,6 @@
 
   ready(() => {
     const form = document.getElementById('field-report-form');
-    const warning = document.getElementById('redaction-warning');
     const status = document.querySelector('.submission-status');
     const confirmation = document.getElementById('report-confirmation');
     const accordionItems = document.querySelectorAll('[data-accordion] .accordion-item');
@@ -91,26 +59,7 @@
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
-      warning?.setAttribute('style', 'display:none');
-      if (status) showStatus(status, 'Validating report...');
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        showStatus(status, 'Please complete all required fields.', 'error');
-        return;
-      }
-
-      const formData = new FormData(form);
-      const passesRedaction = validateRedaction(formData);
-      if (!passesRedaction) {
-        warning?.setAttribute('style', 'display:block');
-        showStatus(
-          status,
-          'Redaction required. Remove personal names, @handles, emails, URLs, or accusations.',
-          'error'
-        );
-        return;
-      }
+      if (status) showStatus(status, 'Submitting report...');
 
       const payload = serializeForm(form);
       try {
@@ -128,7 +77,7 @@
         form.setAttribute('hidden', 'hidden');
         confirmation?.removeAttribute('hidden');
       } catch (error) {
-        showStatus(status, 'Submission blocked. Please try again without identifiers.', 'error');
+        showStatus(status, 'Submission failed. Please try again.', 'error');
       }
     });
   });
