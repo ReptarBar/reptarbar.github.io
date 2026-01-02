@@ -47,8 +47,8 @@
               submissions are anonymized and reviewed before analysis. We collect friction signals—not gossip.
             </p>
             <p class="section-body">
-              Every field is required unless marked optional. Submissions are validated for redaction before they are
-              accepted. Nothing links back to you: we do not store IP addresses or browser fingerprints.
+              Every field is required unless marked optional. Submissions are recorded as written and anonymized before
+              analysis. Nothing links back to you: we do not store IP addresses or browser fingerprints.
             </p>
           </div>
         </div>
@@ -187,20 +187,15 @@
                       <label><input type="checkbox" name="redaction" value="Behavior only" required> I described behaviors and systems, not accusations.</label>
                     </div>
 
-                    <label>Permission for anonymized use</label>
-                    <div class="radio-row">
-                      <label><input type="radio" name="permission" value="Yes" required> Yes, anonymized trends only</label>
-                      <label><input type="radio" name="permission" value="No" required> No, hold for internal review only</label>
-                    </div>
-
-                    <div class="redaction-warning" id="redaction-warning" role="alert">
-                      Please remove personal identifiers. Field Reports may only describe observable community behaviors,
-                      not individuals.
-                    </div>
+                      <label>Permission for anonymized use</label>
+                      <div class="radio-row">
+                        <label><input type="radio" name="permission" value="Yes" required> Yes, anonymized trends only</label>
+                        <label><input type="radio" name="permission" value="No" required> No, hold for internal review only</label>
+                      </div>
 
                     <p class="section-footnote">
-                      Validation is required before submission. Submissions that contain personal identifiers or
-                      accusatory language are automatically blocked.
+                      Submissions are accepted as written. Please avoid personal identifiers or accusatory language to
+                      keep reports focused on observable behaviors.
                     </p>
 
                     <button type="submit" class="report-submit-btn">Submit Anonymous Field Report</button>
